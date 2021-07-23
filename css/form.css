@@ -549,10 +549,21 @@ main .bg_img_2{
 }
 
 @media screen and (max-width: 320px) {
+    main form {
+        width: 89%;
+    }
 
     .DivForm form {
         width: 80%;
         height: 65%;
+    }
+
+    .DivForm form {
+        height: 70%;
+    }
+
+    .DivForm form {
+        width: 90%;
     }
 }
 
