@@ -629,6 +629,10 @@ form > input[type="button"]{
         width: 70%;
         height: 20rem;
     }
+
+    form {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 425px) {

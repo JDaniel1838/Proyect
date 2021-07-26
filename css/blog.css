@@ -1,0 +1,434 @@
+:root{
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --Sant: 'Open Sans', sans-serif;
+    --negro: #29323C;
+    --naranja1:#FC6076;
+    --naranja2:#fd7d5d;
+    --border1:1px solid #000;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: var(--Ubuntu);
+}
+
+
+/* Estilos de Main */
+/* Blog esta en la etiqueta Main */
+.blog{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.blog .CardPrincipal{
+    width: 85%;
+    height: 25rem;
+    margin: 1rem auto 2rem auto;
+    /* background-color: #29323C; */
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.CardPrincipal .DivImg{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CardPrincipal .DivImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+.CardPrincipal .PostContent{
+    width: 38%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.CardPrincipal .PostContent .headersPost{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+.headersPost .Categoria{
+    font-weight: bold;
+    color:var(--naranja2);
+    text-transform: uppercase;
+}
+
+.headersPost .fecha{
+    font-weight: 500;
+    color:#29323C;
+    font-family: var(--Sant);
+}
+
+.CardPrincipal .PostContent .PostTitle{
+    font-size: 2.4rem;
+    color: #29323C;
+    font-weight: 700;
+    margin: 1rem 0 .5rem 0;
+}
+
+.CardPrincipal .PostContent .PostDescription{
+    margin: .5rem 0 .5rem 0;
+    font-family: var(--Sant);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.CardPrincipal .PostContent .AutorData{
+    width: 100%;
+    height: 4rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.PostContent .AutorData img{
+    height: 70%;
+    width: auto;
+    border-radius: 50%;
+    margin-right:1rem;
+}
+
+
+.PostContent .AutorData h5{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #656565;
+}
+
+/* Carda Secundarias */
+.blog .CardsSecundarias{
+    width: 85%;
+    height: auto;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+.blog .CardsSecundarias .cardPostS{
+    border-radius: 5px;
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+}
+
+.cardPostS img{
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.cardPostS .headersPost{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin: .5rem auto;
+}
+
+.cardPostS .headersPost .Categoria{
+    font-weight: bold;
+    color:var(--naranja2);
+    text-transform: uppercase;
+}
+
+.cardPostS .headersPost .fecha{
+    font-weight: 500;
+    color:#29323C;
+    font-family: var(--Sant);
+}
+
+.cardPostS h2{
+    color: #29323C;
+    font-weight: 700;
+    margin: .5rem 0 .5rem 0;
+}
+
+.cardPostS p{
+    font-family: var(--Sant);
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+
+.cardPostS .AutorData{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.cardPostS .AutorData .profileimg{
+    height: 80%;
+    width: auto;
+    border-radius: 50%;
+    margin-right:1rem;
+}
+
+.cardPostS .AutorData h5{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #656565;
+}
+
+
+
+/* DISEÑO ADAPTABLE DE HEADER */
+
+@media screen and (max-width: 1100px) {
+    header > nav > .nav_logo{
+        width: 45%;
+    }
+
+    header > nav > .nav_links{
+        width: 20%;
+    }
+
+    .CardPrincipal .PostContent .PostTitle {
+        font-size: 2.2rem;
+    }
+
+    .CardPrincipal .PostContent .PostDescription {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blog .CardPrincipal {
+        height: 23rem;
+    }
+
+    .CardPrincipal .PostContent .PostTitle {
+        font-size: 2rem;
+    }
+
+    .CardPrincipal .PostContent .PostDescription {
+        font-size: .9rem;
+    }
+
+    .blog .CardsSecundarias{
+        grid-template-columns: 47.5% 47.5%;
+    }
+
+    .cardPostS img {
+        height: 55%;
+    }
+
+    .PostContent .AutorData img {
+        height: 80%;
+    }
+
+    .cardPostS .AutorData h5 {
+        font-size: 1.2rem;
+    }
+
+    .cardPostS .AutorData .profileimg {
+        height: 80%;
+    }  
+    
+    .PostContent .AutorData h5 {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media screen and (max-width: 860px) {
+    html{
+        font-size: 14px;
+    }
+
+    .PostContent .AutorData img {
+        height: 70%;
+    }
+
+    .cardPostS .AutorData h5 {
+        font-size: 1.1rem;
+    }
+
+    .cardPostS .AutorData .profileimg {
+        height: 70%;
+    }  
+    
+    .PostContent .AutorData h5 {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .CardPrincipal .PostContent .PostTitle {
+        font-size: 1.8rem;
+    }
+
+    .CardPrincipal .PostContent .PostDescription {
+        font-size: .8rem;
+    }
+
+    .cardPostS p {
+        font-size: .8rem;
+    }
+
+    .blog .CardPrincipal {
+        height: 22rem;
+    }
+
+    .PostContent .AutorData img {
+        height: 60%;
+    }
+
+    .cardPostS .AutorData h5 {
+        font-size: .9rem;
+    }
+
+    .cardPostS .AutorData .profileimg {
+        height: 60%;
+    }  
+    
+    .PostContent .AutorData h5 {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 13px;
+    }
+
+    .blog .CardPrincipal {
+        flex-direction: column;
+    }
+
+    .CardPrincipal .DivImg {
+        width: 100%
+    }
+
+    .CardPrincipal .DivImg img {
+        width: 80%;
+    }
+    
+    .CardPrincipal .PostContent {
+        width: 100%;
+    }
+
+    .CardPrincipal .PostContent .headersPost {
+        margin-top: .5rem;
+    }
+
+    .blog .CardPrincipal {
+        height: 32.5rem;
+    }
+
+    .CardPrincipal .PostContent .AutorData {
+        height: 3.5rem;
+    }    
+
+    .blog .CardsSecundarias {
+        grid-template-columns:99%;
+    }
+
+    .cardPostS img {
+        width: 80%;
+    }
+
+    .cardPostS > p {
+        color: #29323C;
+        
+    }
+
+    .cardPostS h2{
+    font-size: 1.8rem;
+    color: #29323C;
+    font-weight: 700;
+    margin: 1rem 0 .5rem 0;
+    }
+
+    .CardPrincipal .PostContent .AutorData {
+        justify-content: flex-end;
+    }
+
+    .cardPostS .AutorData {
+        height: 3.5rem;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 12px;
+    }
+
+    .CardPrincipal .DivImg img {
+        width: 90%;
+    }
+
+    .cardPostS img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 11px;
+    }
+
+    .CardPrincipal .DivImg img {
+        width: 95%;
+    }
+
+    .cardPostS img {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    header > nav > .nav_links{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    html{
+        font-size: 10px;
+    }
+}
